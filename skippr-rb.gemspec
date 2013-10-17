@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'skippr/rb/version'
+require 'skippr/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "skippr-rb"
-  spec.version       = Skippr::Rb::VERSION
+  spec.version       = Skippr::VERSION
   spec.authors       = ["Sebastian M. Gauck"]
   spec.email         = ["smg@42ls.de"]
   spec.description   = %q{gem to consume the api of our invoicing tool https://skippr.com}
