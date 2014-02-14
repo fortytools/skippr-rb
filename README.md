@@ -19,11 +19,11 @@ Or install it yourself as:
 ## Usage
 
     Skippr::Api.credentials = {
-      client: "fortytools",
+      client_name: "fortytools",                      # ATTENTION: This client name has to refer to the same skippr client as ...
       app_key: "awesome_skippr_app",
-      app_secret: "top",
-      user_key: "skippr_user_key",
-      user_secret: "0987654321zonk"
+      app_token: "098172398723419887",
+      client_user_api_key: "skippr_client_user_key", # ... the client_user_api_key does! You're gonna get an error response from skippr otherwise.
+      client_user_api_token: "0987654321zonk"
     }
 
     Skippr::Customer.all
