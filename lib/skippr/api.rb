@@ -7,11 +7,6 @@ module Skippr
     self.timeout = 30
     self.include_root_in_json = false
 
-    # nasty hack to disable the root element
-    def to_json(options={})
-      as_json.to_json(options)
-    end
-
     class << self
 
       def site

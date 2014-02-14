@@ -1,7 +1,6 @@
 require "skippr/version"
 
 require "skippr/exceptions"
-require "skippr/json"
 require "skippr/endpoint"
 require "skippr/api"
 
