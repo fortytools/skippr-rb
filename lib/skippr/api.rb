@@ -42,7 +42,7 @@ module Skippr
       def authentication
         valid_until = 1.hour.from_now
         sig_src = [self.client_user_api_token, self.app_token, valid_until.to_time.to_i.to_s].join(":")
-        signature = Digest::MD5.hexdigest(sig_src)
+        signature = Digest::SHA2.hexdigest(sig_src)
         { app: self.app_key,
           user: self.client_user_api_key,
           validuntil: valid_until.to_time.to_i.to_s,
