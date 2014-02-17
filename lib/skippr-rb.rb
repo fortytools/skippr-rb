@@ -1,6 +1,6 @@
 require "skippr/version"
 
-require "active_resource/base"
+require "skippr/active_resource/base"
 
 require "skippr/exceptions"
 require "skippr/endpoint"
