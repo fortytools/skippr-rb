@@ -1,6 +1,8 @@
 module Skippr
 
-  class MissingCredentialsError < StandardError
+  class MissingConfigurationError < StandardError
+  end
+  class UnknownConfigurationError < StandardError
   end
 
 end
