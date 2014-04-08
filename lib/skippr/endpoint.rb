@@ -34,7 +34,7 @@ module Skippr
       end
 
       def path
-        self.thread_container['path'] || "/api/v1/"
+        self.thread_container['path'] || "/api/v2/"
       end
 
       def user
