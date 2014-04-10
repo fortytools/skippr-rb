@@ -36,6 +36,20 @@ module Skippr
         query_options = ( query_options || {} ).merge(self.auth_params)
         "#{prefix(prefix_options)}#{collection_name}#{query_string(query_options)}"
       end
+
+      def get(custom_method_name, options={})
+        super(custom_method_name, options.merge(self.auth_params))
+      end
+      def post(custom_method_name, options={})
+        super(custom_method_name, options.merge(self.auth_params))
+      end
+      def put(custom_method_name, options={})
+        super(custom_method_name, options.merge(self.auth_params))
+      end
+      def delete(custom_method_name, options={})
+        super(custom_method_name, options.merge(self.auth_params))
+      end
+
       ### END ActiveResource API
 
       def valid?
