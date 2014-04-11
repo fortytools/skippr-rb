@@ -21,7 +21,9 @@ module Skippr
 
       ### ActiveResource API
       timeout = 30
-      include_root_in_json = false
+      def include_root_in_json
+        false
+      end
 
       # Thread safety for active_resource, see monkey patch in monkey.rb
 
