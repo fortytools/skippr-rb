@@ -27,7 +27,7 @@ Or install it yourself as:
     })
 
     # The Endpoint is per default configured to be
-    # https://${client_name}.skippr.com/api/v1
+    # https://${client_name}.skippr.com/api/v2
     # so in general you're done with the configuration above
 
 

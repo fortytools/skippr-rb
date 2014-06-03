@@ -161,6 +161,10 @@ module Skippr
 
   end
 
+  # Delegator for convenience, checks whether current skippr api settings allow for a valid connection
+  def self.valid?
+    Api.valid?
+  end
 end
 
 
