@@ -57,12 +57,6 @@ module Skippr
           raise Skippr::UnknownConfigurationError.new("#{unknowns.keys} are unknown endpoint options")
         end
 
-        required_confs = [:subdomain]
-
-        missings = required_confs - conf_hash.symbolize_keys.keys
-        unless missings.empty?
-          raise Skippr::MissingConfigurationError.new("Missing in api configuration: #{missings}")
-        end
       end
     end
   end
