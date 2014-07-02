@@ -107,8 +107,6 @@ module Skippr
           self.thread_container["#{key}"] = value
         end
 
-        Endpoint.configure({subdomain: client_name})
-
         reset_connection
       end
 

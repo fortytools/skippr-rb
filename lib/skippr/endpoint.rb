@@ -13,7 +13,7 @@ module Skippr
       def site
         assert_configuration!(self.thread_container)
 
-        URI.parse("#{self.protocol}://#{self.subdomain}.#{self.domain}#{":" + self.port.to_s if self.port.present?}#{self.path}")
+        URI.parse("#{self.protocol}://#{self.subdomain + "." if self.subdomain.present?}#{self.domain}#{":" + self.port.to_s if self.port.present?}#{self.path}")
       end
 
 
@@ -57,12 +57,6 @@ module Skippr
           raise Skippr::UnknownConfigurationError.new("#{unknowns.keys} are unknown endpoint options")
         end
 
-        required_confs = [:subdomain]
-
-        missings = required_confs - conf_hash.symbolize_keys.keys
-        unless missings.empty?
-          raise Skippr::MissingConfigurationError.new("Missing in api configuration: #{missings}")
-        end
       end
     end
   end
