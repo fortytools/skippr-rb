@@ -9,7 +9,12 @@ class ActiveResource::Base
       thread_container['site'] = site
     end
     def site
-      URI.parse(thread_container['site'])
+      s = thread_container['site']
+      if s.is_a?(String)
+        URI.parse(s)
+      else
+        s
+      end
     end
 
     def password=password
