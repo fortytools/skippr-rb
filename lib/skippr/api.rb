@@ -115,7 +115,7 @@ module Skippr
         configuration_hash[:domain] ||= "skippr.com"
         endpoint_site = [configuration_hash[:protocol], configuration_hash[:domain]].join("://")
         endpoint_site += ":" + configuration_hash[:port].to_s if configuration_hash[:port].present?
-        self.site = endpoint_site
+        self.site = endpoint_site + "/api/v2"
         reset_connection
       end
 
