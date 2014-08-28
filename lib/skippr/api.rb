@@ -58,12 +58,12 @@ module Skippr
         begin
           uri = URI.parse(self.site.to_s + 'auth/valid?' + self.auth_params.to_param)
           http = Net::HTTP.new(uri.host, uri.port)
-          if Endpoint.protocol == 'https'
+          if self.site.scheme == 'https'
             http.use_ssl= true
           end
           rq = Net::HTTP::Get.new(uri.request_uri)
-          unless Endpoint.user.blank?
-            rq.basic_auth(Endpoint.user, Endpoint.password)
+          unless self.user.blank?
+            rq.basic_auth(self.user, self.password)
           end
           response = http.request(rq)
           body = response.read_body
@@ -111,8 +111,9 @@ module Skippr
       end
 
       def configure_endpoint(configuration_hash)
-        Endpoint.configure(configuration_hash)
-
+        endpoint_site = [configuration_hash[:protocol], configuration_hash[:domain]].join("://")
+        endpoint_site += ":" + configuration_hash[:port].to_s if configuration_hash[:port].present?
+        self.site = endpoint_site
         reset_connection
       end
 

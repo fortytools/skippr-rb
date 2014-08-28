@@ -27,14 +27,13 @@ Or install it yourself as:
     })
 
     # The Endpoint is per default configured to be
-    # https://${client_name}.skippr.com/api/v2
+    # https://skippr.com/api/v2
     # so in general you're done with the configuration above
 
 
     # But just in case you'd like to tweak this endpoint, then provide a conf hash with any of the following
     Skippr::Api.configure_endpoint({
       protocol: "http",
-      subdomain: 'batzen',            # ATTENTION: has to refer to the same client as the 'client_user_api_key' does
       domain: "skippr.local",
       port: 3030,
       path: '/superapi/v33/',         # path is always surrounded by '/'

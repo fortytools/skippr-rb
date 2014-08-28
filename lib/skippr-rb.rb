@@ -3,7 +3,6 @@ require "skippr/version"
 require "skippr/active_resource/base"
 
 require "skippr/exceptions"
-require "skippr/endpoint"
 require "skippr/api"
 
 
