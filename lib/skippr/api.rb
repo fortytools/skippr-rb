@@ -145,7 +145,7 @@ module Skippr
       end
 
       def assert_configuration!(conf_hash)
-        required_confs = [:app_key, :app_token, :client_user_api_key, :client_user_api_token, :client_name, :site]
+        required_confs = [:app_key, :app_token, :client_user_api_key, :client_user_api_token, :client_name]
 
         unknowns = conf_hash.symbolize_keys.except(*required_confs)
         unless unknowns.empty?

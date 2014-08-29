@@ -5,6 +5,7 @@ class ActiveResource::Base
       @connection = nil
     end
 
+=begin
     def site=site
       thread_container['site'] = site
     end
@@ -35,6 +36,7 @@ class ActiveResource::Base
       Thread.current['active_resource.conf'] ||= {}
       Thread.current['active_resource.conf']
     end
+=end
 
 
   end
