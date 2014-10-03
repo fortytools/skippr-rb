@@ -1,5 +1,5 @@
 module Skippr
-  class ItemCategory < Api
+  class Item < Api
 
   end
 end
