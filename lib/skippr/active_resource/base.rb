@@ -24,7 +24,7 @@ class ActiveResource::Base
 
       Skippr::Endpoint.configure({
           protocol:   site_uri.scheme,
-          subdomain:  subdomain.join('.'),
+          subdomain:  subdomain.try(:join,'.'),
           domain:     domain.join('.'),
           port:       site_uri.port,
           path:       site_uri.path,
