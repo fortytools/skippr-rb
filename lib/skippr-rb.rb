@@ -8,6 +8,7 @@ require "skippr/api"
 
 
 require "skippr/resources/account"
+require "skippr/resources/attachment"
 require "skippr/resources/attachment_type"
 require "skippr/resources/bank_account"
 require "skippr/resources/case"
